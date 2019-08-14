@@ -8,6 +8,7 @@ import 'package:platform_app/screens/screen4.dart';
 
 void main() => runApp(MyApp());
 
+// Themes
 final materialThemeData = ThemeData(
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
@@ -22,6 +23,8 @@ final cupertinoTheme = CupertinoThemeData(
     primaryColor: Colors.blue,
     barBackgroundColor: Colors.blue,
     scaffoldBackgroundColor: Colors.white);
+
+// Styles
 final bottomNavTextStyle = TextStyle(color: Colors.white, fontSize: 14.0);
 final toolbarButtonTextStyle = TextStyle(color: Colors.white, fontSize: 14.0);
 final toolbarTextStyle = TextStyle(color: Colors.white, fontSize: 16.0);
@@ -41,14 +44,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
 
   final String title;
 
@@ -61,22 +56,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+
     return PlatformScaffold(
       appBar: PlatformAppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text(widget.title, style: toolbarTextStyle,),
         ios: (_) => CupertinoNavigationBarData(
-          automaticallyImplyLeading: true,
+          transitionBetweenRoutes: false,
           trailing: PlatformButton(
             padding: EdgeInsets.all(4.0),
-            child: Icon(Icons.plus_one, color: Colors.white,),
+            child: Icon(Icons.add, color: Colors.white,),
             onPressed: () {
               Navigator.push(
                 context,
@@ -128,9 +116,9 @@ class _MyHomePageState extends State<MyHomePage> {
             );
 
           },
-          tooltip: 'Increment',
+          tooltip: 'Screen 4',
           child: Icon(Icons.add),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
+        ),
       ),
     );
   }

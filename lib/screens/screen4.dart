@@ -13,7 +13,9 @@ class Screen4 extends StatelessWidget {
           'Screen 4',
           style: toolbarTextStyle,
         ),
+        android: (_) => MaterialAppBarData(),
         ios: (_) => CupertinoNavigationBarData(
+          transitionBetweenRoutes: false,
           leading: PlatformButton(
             padding: EdgeInsets.all(4.0),
             child: Icon(Icons.arrow_back, color: Colors.white),
