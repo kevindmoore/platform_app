@@ -86,14 +86,14 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: new Icon(Icons.business, color: Colors.grey),
-            title: new Text('Screen 1', style: bottomNavTextStyle),
-            activeIcon: new Icon(Icons.business, color: Colors.white),
+            icon:  Icon(Icons.business, color: Colors.grey),
+            title:  Text('Screen 1', style: bottomNavTextStyle),
+            activeIcon:  Icon(Icons.business, color: Colors.white),
           ),
           BottomNavigationBarItem(
-            icon: new Icon(Icons.person, color: Colors.grey),
-            title: new Text('Screen 2', style: bottomNavTextStyle),
-            activeIcon: new Icon(Icons.person, color: Colors.white),
+            icon:  Icon(Icons.person, color: Colors.grey),
+            title:  Text('Screen 2', style: bottomNavTextStyle),
+            activeIcon:  Icon(Icons.person, color: Colors.white),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.note, color: Colors.grey),
@@ -101,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'Screen 3',
               style: bottomNavTextStyle,
             ),
-            activeIcon: new Icon(Icons.note, color: Colors.white),
+            activeIcon:  Icon(Icons.note, color: Colors.white),
           )
         ],
       ),
